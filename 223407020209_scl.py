@@ -72,7 +72,7 @@ for i in range(m):
 	money, value = map(int,input().split())
 	item_info_list.append([money,value])
 
-print(item_info_list)	
+#print(item_info_list)	
 
 backpack = [[0 for i in range(N+1)] for j in range(m+1)]
 print(np.array(backpack))
@@ -99,5 +99,5 @@ for row in range(1, rows_num):
 			backpack[row][column] = backpack[row-1][column]
 		else:
 			backpack[row][column] = max(backpack[row-1][column], item_info_list[row][1]*item_info_list[row][0]+backpack[row-1][column-item_info_list[row][0]])
-print(np.array(backpack))
+#print(np.array(backpack))
 print(backpack[-1][-1])
